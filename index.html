@@ -1278,8 +1278,8 @@ table.data-table tr:last-child td { border-bottom: 0; }
             sem o atendente precisar pedir nada.
           </p>
           <div class="feature-card__how"><b>Como faz</b><br>
-            Um observador de mutações do DOM detecta a mensagem nova do cliente, monta o histórico
-            recente da conversa e consulta a API da TRIA.
+            A extensão fica atenta à tela do chat; assim que percebe uma mensagem nova do
+            cliente, monta o histórico recente da conversa e consulta a TRIA.
             A resposta volta com passo a passo, vídeo e link da solução, e pode pré-preencher o
             rascunho. Liga/desliga por atendimento; também analisa <em>prints</em> de erro que o
             cliente enviar.
@@ -1373,8 +1373,8 @@ table.data-table tr:last-child td { border-bottom: 0; }
           <div class="tr-eyebrow tr-eyebrow--green">Roteamento</div>
           <h2 class="tr-title-fluid">Qual <em>especialista</em> responde</h2>
         </div>
-        <p class="tr-lead">Cada consulta é enviada com um especialista associado (agent_group) —
-        e a extensão tenta acertar isso sozinha, sem esperar o atendente escolher.</p>
+        <p class="tr-lead">Cada consulta é direcionada a um especialista específico — e a
+        extensão tenta acertar isso sozinha, sem esperar o atendente escolher.</p>
       </div>
 
       <div class="tr-panel tr-panel--dark" style="margin-bottom:32px">
@@ -1470,7 +1470,7 @@ table.data-table tr:last-child td { border-bottom: 0; }
         <article class="tr-card" style="padding:20px">
           <div style="display:flex;gap:12px;margin-bottom:12px;align-items:center">
             <span class="tr-icon ic-shield" style="background-color:var(--tr-dark-sky);width:22px;height:22px"></span>
-            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Guard-rails de conteúdo</h3>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Proteções de conteúdo</h3>
           </div>
           <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
             A IA nunca sugere acesso remoto, nunca propõe "transferir para um humano" (o atendente
@@ -1549,10 +1549,10 @@ table.data-table tr:last-child td { border-bottom: 0; }
           </div>
           <p style="font-size:14px;font-weight:300;color:var(--tr-text-body);line-height:1.6">
             Atalho <code style="background:var(--tr-cream);padding:2px 6px">Ctrl+Shift+Alt+A</code>
-            abre um painel de login (Google) e uma lista de recursos com <b>kill switch remoto</b>:
-            o administrador pode desligar um recurso para todos os atendentes sem publicar uma
-            versão nova. Nunca liga à força algo que o próprio atendente já desligou na preferência
-            pessoal dele.
+            abre um painel de login (Google) e uma lista de recursos que podem ser <b>desligados
+            remotamente</b>: o administrador desativa um recurso para todos os atendentes sem
+            precisar publicar uma versão nova. Nunca liga à força algo que o próprio atendente já
+            desligou na preferência pessoal dele.
           </p>
         </div>
         <div class="tr-card" style="padding:24px">
@@ -1601,7 +1601,7 @@ table.data-table tr:last-child td { border-bottom: 0; }
         </div>
         <div class="tr-timeline__item tr-timeline__item--done">
           <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tr-green-success)">v3.0.15.1</span>
-          <h5 class="tr-h3" style="font-size:15px;font-weight:500">Módulo Administrador (kill switch remoto)</h5>
+          <h5 class="tr-h3" style="font-size:15px;font-weight:500">Módulo Administrador (desligamento remoto de recursos)</h5>
         </div>
         <div class="tr-timeline__item tr-timeline__item--milestone">
           <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tr-orange)">v3.0.16.0</span>
