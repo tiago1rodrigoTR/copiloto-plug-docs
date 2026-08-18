@@ -1281,8 +1281,9 @@ table.data-table tr:last-child td { border-bottom: 0; }
             A extensão fica atenta à tela do chat; assim que percebe uma mensagem nova do
             cliente, monta o histórico recente da conversa e consulta a TRIA.
             A resposta volta com passo a passo, vídeo e link da solução, e pode pré-preencher o
-            rascunho. Liga/desliga por atendimento; também analisa <em>prints</em> de erro que o
-            cliente enviar.
+            rascunho sem roubar o foco do atendente nem sobrescrever o que ele já tiver digitado
+            por conta própria. Liga/desliga por atendimento; também analisa <em>prints</em> de
+            erro que o cliente enviar.
           </div>
         </article>
 
@@ -1446,7 +1447,24 @@ table.data-table tr:last-child td { border-bottom: 0; }
         sem alguém olhar antes — e para a base de conhecimento melhorar com cada erro.</p>
       </div>
 
+      <div class="tr-stats" style="margin-top:0;padding-top:32px;margin-bottom:40px">
+        <div><div class="tr-stat__value">21/21</div><div class="tr-stat__label">Testes automatizados do roteador de especialistas</div></div>
+        <div><div class="tr-stat__value">10/10</div><div class="tr-stat__label">Testes da sondagem inicial pós-transferência</div></div>
+        <div><div class="tr-stat__value">3</div><div class="tr-stat__label">Bugs reais achados mesmo após 17 testes passarem (v3.0.16.0)</div></div>
+      </div>
+
       <div class="compact-grid">
+        <article class="tr-card" style="padding:20px">
+          <div style="display:flex;gap:12px;margin-bottom:12px;align-items:center">
+            <span class="tr-icon ic-gauge" style="background-color:var(--tr-dark-amber);width:22px;height:22px"></span>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Regras medidas, não só intuídas</h3>
+          </div>
+          <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
+            Embutir a regra "sem acesso remoto" na pergunta enviada à IA derrubava a confiança
+            da busca de 0,63 para 0,05 — por isso a regra foi movida para depois da resposta
+            pronta, em vez de ficar só na intuição de que "deveria funcionar".
+          </p>
+        </article>
         <article class="tr-card" style="padding:20px">
           <div style="display:flex;gap:12px;margin-bottom:12px;align-items:center">
             <span class="tr-icon ic-thumbs-up" style="background-color:var(--tr-green-success);width:22px;height:22px"></span><span class="tr-icon ic-thumbs-down" style="background-color:var(--tr-danger);width:22px;height:22px"></span>
@@ -1541,6 +1559,11 @@ table.data-table tr:last-child td { border-bottom: 0; }
         transparência total sobre o que é medido.</p>
       </div>
 
+      <div class="tr-stats" style="margin-top:0;padding-top:32px;margin-bottom:40px">
+        <div><div class="tr-stat__value">9</div><div class="tr-stat__label">Recursos com desligamento remoto individual</div></div>
+        <div><div class="tr-stat__value">5</div><div class="tr-stat__label">Destinos de rede, todos nomeados e justificados na política</div></div>
+      </div>
+
       <div class="two-col">
         <div class="tr-card" style="padding:24px">
           <div style="display:flex;gap:12px;align-items:center;margin-bottom:14px">
@@ -1549,10 +1572,12 @@ table.data-table tr:last-child td { border-bottom: 0; }
           </div>
           <p style="font-size:14px;font-weight:300;color:var(--tr-text-body);line-height:1.6">
             Atalho <code style="background:var(--tr-cream);padding:2px 6px">Ctrl+Shift+Alt+A</code>
-            abre um painel de login (Google) e uma lista de recursos que podem ser <b>desligados
-            remotamente</b>: o administrador desativa um recurso para todos os atendentes sem
-            precisar publicar uma versão nova. Nunca liga à força algo que o próprio atendente já
-            desligou na preferência pessoal dele.
+            abre um painel de login (Google) e uma lista dos 9 recursos da extensão, cada um com
+            seu próprio interruptor <b>desligado remotamente</b>: o administrador desativa um
+            recurso específico para todos os atendentes sem precisar publicar uma versão nova.
+            Nunca liga à força algo que o próprio atendente já desligou na preferência pessoal
+            dele, e uma falha de rede nunca desliga tudo de uma vez — mantém o último valor
+            conhecido.
           </p>
         </div>
         <div class="tr-card" style="padding:24px">
@@ -1562,7 +1587,7 @@ table.data-table tr:last-child td { border-bottom: 0; }
           </div>
           <table class="data-table">
             <tr><th>Coleta</th><td>Recurso acionado, atendente, protocolo, se a sugestão ajudou (👍/👎 e motivo)</td></tr>
-            <tr><th>Não coleta</th><td>Mensagens escritas pelo <b>cliente</b>, em nenhuma hipótese</td></tr>
+            <tr><th>Não coleta</th><td>Mensagens escritas pelo <b>cliente</b>, em nenhuma hipótese — o texto é lido em tempo real para gerar a sugestão e descartado logo depois, sem armazenamento nem transmissão integral</td></tr>
             <tr><th>Exceção</th><td>Num 👎, o texto sugerido pela IA e a resposta que o próprio atendente enviou depois — para corrigir a base</td></tr>
           </table>
         </div>
@@ -1579,7 +1604,9 @@ table.data-table tr:last-child td { border-bottom: 0; }
           <h2 class="tr-title-fluid">Marcos até <em>aqui</em></h2>
         </div>
         <p class="tr-lead">Seleção dos lançamentos que mudaram como a ferramenta funciona —
-        não é a lista completa de correções, essa fica no CHANGELOG do projeto.</p>
+        não é a lista completa de correções, essa fica no CHANGELOG do projeto. Só entre
+        22/07 e 18/08/2026 já são <b>112 versões documentadas</b>: um problema relatado não
+        fica meses esperando a próxima janela de release.</p>
       </div>
 
       <div class="tr-timeline" style="max-width:760px">
@@ -1619,127 +1646,6 @@ table.data-table tr:last-child td { border-bottom: 0; }
     </div>
   </section>
 
-  <!-- ═══════════ POR QUE ADOTAR ═══════════ -->
-  <section class="tr-section tr-section--beige" id="por-que-adotar">
-    <div class="tr-container">
-      <div class="tr-section-head">
-        <div>
-          <div class="tr-eyebrow">Adoção interna</div>
-          <h2 class="tr-title-fluid">O caso para <em>usar</em> o Copiloto</h2>
-        </div>
-        <p class="tr-lead">Não é uma lista de benefícios genéricos. É o que o código, o
-        changelog e a política de privacidade do projeto realmente mostram — cada afirmação
-        abaixo foi conferida linha a linha antes de entrar aqui.</p>
-      </div>
-
-      <div class="tr-callout tr-callout--success" style="margin-bottom:32px">
-        <span class="tr-icon ic-shield" style="background-color:currentColor;width:24px;height:24px"></span>
-        <div>
-          <div class="tr-callout__title">Nunca envia nada sozinho</div>
-          <div class="tr-callout__text">Toda sugestão cai num painel ou direto no rascunho para o
-          atendente revisar, editar e decidir o que enviar — a extensão observa e sugere, o clique
-          final é sempre humano. É esse desenho, mais do que qualquer argumento, que remove o medo
-          mais comum de experimentar IA no atendimento: perder o controle da conversa com o cliente.</div>
-        </div>
-      </div>
-
-      <div class="tr-stats" style="margin-top:0;padding-top:32px;margin-bottom:48px">
-        <div><div class="tr-stat__value">112</div><div class="tr-stat__label">Versões em 27 dias (22/07&ndash;18/08)</div></div>
-        <div><div class="tr-stat__value">9</div><div class="tr-stat__label">Recursos com desligamento remoto individual</div></div>
-        <div><div class="tr-stat__value">5</div><div class="tr-stat__label">Destinos de rede, todos nomeados e justificados na política</div></div>
-      </div>
-
-      <div class="feature-grid">
-        <article class="tr-card" style="padding:24px">
-          <div class="feature-card__head">
-            <div class="feature-card__icon-box"><span class="tr-icon ic-arrows-rotate" style="background-color:var(--tr-orange);width:22px;height:22px"></span></div>
-          </div>
-          <h3 class="tr-h3" style="font-size:16px;font-weight:500;margin-bottom:6px">Manutenção ativa, não abandono</h3>
-          <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
-            O histórico do projeto soma 112 versões em 27 dias corridos, de 22/07 a 18/08/2026,
-            cada uma registrada no changelog interno. Um problema relatado não fica meses
-            esperando a próxima janela de release.
-          </p>
-        </article>
-
-        <article class="tr-card" style="padding:24px">
-          <div class="feature-card__head">
-            <div class="feature-card__icon-box"><span class="tr-icon ic-memo-circle-check" style="background-color:var(--tr-green-mid);width:22px;height:22px"></span></div>
-          </div>
-          <h3 class="tr-h3" style="font-size:16px;font-weight:500;margin-bottom:6px">Testado contra o código real</h3>
-          <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
-            A suíte do roteador de especialistas foi de 20/21 para 21/21 cenários ao expor uma
-            divergência real de comportamento; a de sondagem inicial pós-transferência partiu de
-            8 testes, achou 3 gaps reais e fechou em 10/10; a suíte de contexto de conversa cresceu
-            de 34 para 38 cenários. Extraídos do código de produção, não escritos de memória.
-          </p>
-        </article>
-
-        <article class="tr-card" style="padding:24px">
-          <div class="feature-card__head">
-            <div class="feature-card__icon-box"><span class="tr-icon ic-gauge" style="background-color:var(--tr-dark-sky);width:22px;height:22px"></span></div>
-          </div>
-          <h3 class="tr-h3" style="font-size:16px;font-weight:500;margin-bottom:6px">Teste passando não encerra o caso</h3>
-          <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
-            Na correção do bloqueio de envio sem avaliação (v3.0.16.0), 17 asserções já passavam
-            contra o código extraído — mas o recurso ainda falhava no PLUG real. A equipe voltou
-            ao código em produção e só fechou o caso depois de achar três bugs concretos.
-          </p>
-        </article>
-
-        <article class="tr-card" style="padding:24px">
-          <div class="feature-card__head">
-            <div class="feature-card__icon-box"><span class="tr-icon ic-shield" style="background-color:var(--tr-dark-amber);width:22px;height:22px"></span></div>
-          </div>
-          <h3 class="tr-h3" style="font-size:16px;font-weight:500;margin-bottom:6px">Regras de segurança medidas, não só intuídas</h3>
-          <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
-            Embutir a regra "sem acesso remoto" na pergunta enviada à IA derrubava a confiança da
-            busca de 0,63 para 0,05 — por isso a regra foi movida para depois da resposta pronta.
-            O guardrail que impede a IA de se apresentar como a própria TRIA foi testado contra 4
-            frases técnicas legítimas que citam "TRIA" em outro contexto, sem gerar falso positivo.
-          </p>
-        </article>
-
-        <article class="tr-card" style="padding:24px">
-          <div class="feature-card__head">
-            <div class="feature-card__icon-box"><span class="tr-icon ic-database" style="background-color:var(--tr-navy);width:22px;height:22px"></span></div>
-          </div>
-          <h3 class="tr-h3" style="font-size:16px;font-weight:500;margin-bottom:6px">Mensagem do cliente, processada e descartada</h3>
-          <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
-            O texto do cliente é lido em tempo real para gerar a sugestão e descartado logo
-            depois — sem armazenamento nem transmissão integral. A telemetria mede o uso do
-            atendente (recurso acionado, sugestão aprovada ou rejeitada, duração), nunca o
-            conteúdo da conversa do cliente.
-          </p>
-        </article>
-
-        <article class="tr-card" style="padding:24px">
-          <div class="feature-card__head">
-            <div class="feature-card__icon-box"><span class="tr-icon ic-key" style="background-color:var(--tr-orange);width:22px;height:22px"></span></div>
-          </div>
-          <h3 class="tr-h3" style="font-size:16px;font-weight:500;margin-bottom:6px">Controle remoto sem esperar nova versão</h3>
-          <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
-            Um administrador pode desligar qualquer um dos 9 recursos individuais da extensão
-            remotamente, com validação exigida tanto no cliente quanto no servidor. Falha de
-            rede nunca liga nem desliga tudo de uma vez: mantém o último valor conhecido.
-          </p>
-        </article>
-
-        <article class="tr-card" style="padding:24px">
-          <div class="feature-card__head">
-            <div class="feature-card__icon-box"><span class="tr-icon ic-pen-to-square" style="background-color:var(--tr-green-mid);width:22px;height:22px"></span></div>
-          </div>
-          <h3 class="tr-h3" style="font-size:16px;font-weight:500;margin-bottom:6px">A sugestão já cai pronta no rascunho</h3>
-          <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
-            A resposta da IA é escrita direto no campo de resposta, com a formatação já
-            convertida, sem roubar o foco do atendente e sem sobrescrever o que ele já tiver
-            digitado por conta própria. Quem prefere revisar antes pode desligar o
-            preenchimento automático.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
   <!-- ═══════════ RODAPÉ ═══════════ -->
   <footer class="tr-section tr-section--white tr-section--flush">
     <div class="tr-container" style="text-align:center">
