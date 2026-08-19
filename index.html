@@ -1216,14 +1216,14 @@ table.data-table tr:last-child td { border-bottom: 0; }
       <p class="tr-lead" style="font-size:20px;max-width:720px">
         O Copiloto PLUG é uma extensão do Google Chrome que atua como assistente de IA para
         os atendentes de suporte da Domínio Sistemas, integrada ao chat do PLUG
-        (tr.plugsocial.com.br). Ele acompanha a conversa, consulta a mesma TRIA que já fala com
+        (tr.plugsocial.com.br). Ele acompanha a conversa, consulta a mesma IA que já fala com
         o cliente antes da transferência, e sugere respostas prontas — sem nunca enviar nada ao
         cliente sozinho. Este documento detalha cada recurso, sua finalidade e o
         funcionamento técnico correspondente.
       </p>
       <div class="tr-stats">
         <div><div class="tr-stat__value">18</div><div class="tr-stat__label">Recursos ativos</div></div>
-        <div><div class="tr-stat__value">TRIA</div><div class="tr-stat__label">Motor de IA</div></div>
+        <div><div class="tr-stat__value">1</div><div class="tr-stat__label">Motor de IA único</div></div>
       </div>
     </div>
   </section>
@@ -1262,7 +1262,7 @@ table.data-table tr:last-child td { border-bottom: 0; }
       <div class="tr-section-head">
         <div>
           <div class="tr-eyebrow tr-eyebrow--green">O motor por trás</div>
-          <h2 class="tr-title-fluid">Respostas vêm da <em>TRIA</em></h2>
+          <h2 class="tr-title-fluid">Respostas vêm de <em>uma fonte só</em></h2>
         </div>
         <p class="tr-lead">Todo recurso de IA desta extensão consulta a mesma API — não busca em
         lugares diferentes dependendo do recurso.</p>
@@ -1271,10 +1271,10 @@ table.data-table tr:last-child td { border-bottom: 0; }
       <div class="tr-card" style="padding:28px;max-width:640px">
         <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
           <span class="tr-icon ic-microchip-ai" style="background-color:var(--tr-orange);width:28px;height:28px"></span>
-          <h3 class="tr-h3" style="font-weight:500">Copiloto PLUG <span style="font-weight:300;color:var(--tr-gray)">— API da TRIA</span></h3>
+          <h3 class="tr-h3" style="font-weight:500">Copiloto PLUG <span style="font-weight:300;color:var(--tr-gray)">— motor de IA único</span></h3>
         </div>
         <p style="font-size:14px;font-weight:300;color:var(--tr-text-body);line-height:1.6">
-          Consulta a API da <b>TRIA</b> — a mesma assistente virtual que já conversa com o cliente
+          Consulta a mesma IA — a mesma assistente virtual que já conversa com o cliente
           no bot de triagem antes de transferir o atendimento para um humano. Publicada no Chrome
           Web Store (listagem "Copiloto PLUG"), versão atual <b>5.0.0.2</b> (build interno 3.0.16.15).
         </p>
@@ -1307,7 +1307,7 @@ table.data-table tr:last-child td { border-bottom: 0; }
           </p>
           <div class="feature-card__how"><b>Como faz</b><br>
             A extensão fica atenta à tela do chat; assim que percebe uma mensagem nova do
-            cliente, monta o histórico recente da conversa e consulta a TRIA.
+            cliente, monta o histórico recente da conversa e consulta a IA.
             A resposta volta com passo a passo, vídeo e link da solução, e pode pré-preencher o
             rascunho sem roubar o foco do atendente nem sobrescrever o que ele já tiver digitado
             por conta própria. Liga/desliga por atendimento; também analisa <em>prints</em> de
@@ -1565,7 +1565,7 @@ table.data-table tr:last-child td { border-bottom: 0; }
           </div>
           <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
             A IA nunca sugere acesso remoto, nunca propõe "transferir para um humano" (o atendente
-            já é humano) e nunca se apresenta como a própria TRIA.
+            já é humano) e nunca se apresenta como o assistente virtual do bot de triagem.
           </p>
         </article>
         <article class="tr-card" style="padding:20px">
@@ -1687,68 +1687,6 @@ table.data-table tr:last-child td { border-bottom: 0; }
   </section>
 
   <!-- ═══════════ LINHA DO TEMPO ═══════════ -->
-  <section class="tr-section tr-section--cream tr-section--flush" id="linha-do-tempo">
-    <div class="tr-container">
-      <div class="tr-section-head">
-        <div>
-          <div class="tr-eyebrow">Evolução</div>
-          <h2 class="tr-title-fluid">Marcos até <em>aqui</em></h2>
-        </div>
-        <p class="tr-lead">Seleção dos lançamentos que mudaram como a ferramenta funciona —
-        não é a lista completa de correções, essa fica no CHANGELOG do projeto. Só entre
-        22/07 e 18/08/2026 já são <b>112 versões documentadas</b>: um problema relatado não
-        fica meses esperando a próxima janela de release.</p>
-      </div>
-
-      <div class="tr-timeline" style="max-width:760px">
-        <div class="tr-timeline__item tr-timeline__item--milestone">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tr-orange)">Era Open Arena</span>
-          <h5 class="tr-h3" style="font-size:15px;font-weight:500">Primeiro motor: Open Arena, plataforma de IA da Thomson Reuters</h5>
-        </div>
-        <div class="tr-timeline__item tr-timeline__item--milestone">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tr-orange)">Era Alia</span>
-          <h5 class="tr-h3" style="font-size:15px;font-weight:500">Segundo motor: Alia, Central de Soluções da Domínio Sistemas</h5>
-        </div>
-        <div class="tr-timeline__item tr-timeline__item--milestone">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tr-orange)">Identidade visual</span>
-          <h5 class="tr-h3" style="font-size:15px;font-weight:500">Identidade visual Thomson Reuters</h5>
-        </div>
-        <div class="tr-timeline__item tr-timeline__item--done">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tr-green-success)">Contexto e avaliação</span>
-          <h5 class="tr-h3" style="font-size:15px;font-weight:500">Copiloto com contexto e avaliação</h5>
-        </div>
-        <div class="tr-timeline__item tr-timeline__item--milestone">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tr-orange)">Era TRIA</span>
-          <h5 class="tr-h3" style="font-size:15px;font-weight:500">Terceiro motor: TRIA, na variante Copiloto PLUG</h5>
-        </div>
-        <div class="tr-timeline__item tr-timeline__item--done">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tr-green-success)">Roteamento pelo menu</span>
-          <h5 class="tr-h3" style="font-size:15px;font-weight:500">Roteamento certo pelo menu, desde a 1ª pergunta</h5>
-        </div>
-        <div class="tr-timeline__item tr-timeline__item--milestone">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tr-orange)">Avaliação obrigatória</span>
-          <h5 class="tr-h3" style="font-size:15px;font-weight:500">Avaliação obrigatória antes de enviar</h5>
-        </div>
-        <div class="tr-timeline__item tr-timeline__item--done">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tr-green-success)">Administração remota</span>
-          <h5 class="tr-h3" style="font-size:15px;font-weight:500">Módulo Administrador (desligamento remoto de recursos)</h5>
-        </div>
-        <div class="tr-timeline__item tr-timeline__item--milestone">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tr-orange)">Especialista dinâmico</span>
-          <h5 class="tr-h3" style="font-size:15px;font-weight:500">Especialista dinâmico, reconsulta automática e sondagem inicial</h5>
-        </div>
-        <div class="tr-timeline__item tr-timeline__item--done">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tr-green-success)">Personalização</span>
-          <h5 class="tr-h3" style="font-size:15px;font-weight:500">Bandeja de IA fixável na toolbar</h5>
-        </div>
-        <div class="tr-timeline__item tr-timeline__item--doing">
-          <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tr-dark-sky)">Atual</span>
-          <h5 class="tr-h3" style="font-size:15px;font-weight:500">Robustez do roteador AUTO e da sondagem inicial — testes automatizados ampliados</h5>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ═══════════ RODAPÉ ═══════════ -->
   <footer class="tr-section tr-section--white tr-section--flush">
     <div class="tr-container" style="text-align:center">
