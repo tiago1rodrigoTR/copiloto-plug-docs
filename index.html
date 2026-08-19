@@ -1164,6 +1164,33 @@ table.data-table tr:last-child td { border-bottom: 0; }
 	.doc-topbar { display: none; }
 }
 
+/* Vídeo de demonstração nos cards de recurso */
+.feature-card__video-btn {
+	display: inline-flex; align-items: center; gap: 7px; margin-top: 14px;
+	padding: 8px 14px; font-size: 12.5px; font-weight: 700; letter-spacing: .02em;
+	color: var(--tr-orange); background: transparent; border: 1px solid var(--tr-orange);
+	cursor: pointer; transition: background .15s ease, color .15s ease;
+}
+.feature-card__video-btn:hover { background: var(--tr-orange); color: #fff; }
+.feature-card__video-btn svg { width: 12px; height: 12px; flex-shrink: 0; }
+
+.tr-video-modal {
+	display: none; position: fixed; inset: 0; z-index: 9999;
+	background: rgba(18, 48, 21, .82); padding: 40px 20px;
+	align-items: center; justify-content: center;
+}
+.tr-video-modal.aberto { display: flex; }
+.tr-video-modal__box {
+	position: relative; width: 100%; max-width: 960px; background: #000;
+	box-shadow: 0 20px 60px rgba(0,0,0,.5);
+}
+.tr-video-modal__box video { display: block; width: 100%; height: auto; max-height: 80vh; }
+.tr-video-modal__close {
+	position: absolute; top: -42px; right: 0; background: transparent; border: none;
+	color: #fff; font-size: 30px; line-height: 1; cursor: pointer; padding: 4px 8px;
+}
+.tr-video-modal__close:hover { color: var(--tr-orange); }
+
 </style>
 </head>
 <body>
@@ -1282,6 +1309,9 @@ table.data-table tr:last-child td { border-bottom: 0; }
             por conta própria. Liga/desliga por atendimento; também analisa <em>prints</em> de
             erro que o cliente enviar.
           </div>
+          <button type="button" class="feature-card__video-btn" data-video="videos/Copiloto_Automatico.mp4" data-video-title="Copiloto Automático">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2l10 6-10 6V2z"/></svg> Ver demonstração
+          </button>
         </article>
 
         <article class="tr-card" style="padding:28px">
@@ -1297,6 +1327,9 @@ table.data-table tr:last-child td { border-bottom: 0; }
             Mesmo motor de consulta do Copiloto Automático, só que disparado manualmente pelo botão
             🪄 da barra de ferramentas, a qualquer momento do atendimento.
           </div>
+          <button type="button" class="feature-card__video-btn" data-video="videos/Responder_com_IA.mp4" data-video-title="Responder com IA">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2l10 6-10 6V2z"/></svg> Ver demonstração
+          </button>
         </article>
 
         <article class="tr-card" style="padding:28px">
@@ -1312,6 +1345,9 @@ table.data-table tr:last-child td { border-bottom: 0; }
             Processa o histórico completo da conversa numa única consulta interna, separada do
             fluxo de resposta ao cliente. Útil para transferência ou registro em anotações.
           </div>
+          <button type="button" class="feature-card__video-btn" data-video="videos/Resumir_com_IA.mp4" data-video-title="Resumir com IA">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2l10 6-10 6V2z"/></svg> Ver demonstração
+          </button>
         </article>
 
         <article class="tr-card" style="padding:28px">
@@ -1327,6 +1363,9 @@ table.data-table tr:last-child td { border-bottom: 0; }
             Envia só o texto atual do rascunho com uma instrução de reescrita no estilo escolhido —
             não busca na base de conhecimento, é reescrita pura de estilo.
           </div>
+          <button type="button" class="feature-card__video-btn" data-video="videos/Melhorar_Texto.mp4" data-video-title="Melhorar Texto">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2l10 6-10 6V2z"/></svg> Ver demonstração
+          </button>
         </article>
 
         <article class="tr-card" style="padding:28px">
@@ -1362,6 +1401,38 @@ table.data-table tr:last-child td { border-bottom: 0; }
       </div>
     </div>
   </section>
+
+  <!-- Modal de vídeo de demonstração (compartilhado pelos 6 cards de recurso) -->
+  <div class="tr-video-modal" id="tr-video-modal">
+    <div class="tr-video-modal__box">
+      <button type="button" class="tr-video-modal__close" id="tr-video-modal-close" title="Fechar" aria-label="Fechar">&times;</button>
+      <video id="tr-video-modal-player" controls playsinline></video>
+    </div>
+  </div>
+  <script>
+  (function () {
+    var modal = document.getElementById('tr-video-modal');
+    var player = document.getElementById('tr-video-modal-player');
+    var closeBtn = document.getElementById('tr-video-modal-close');
+    function abrir(src) {
+      player.src = src;
+      modal.classList.add('aberto');
+      player.play().catch(function () {});
+    }
+    function fechar() {
+      modal.classList.remove('aberto');
+      player.pause();
+      player.removeAttribute('src');
+      player.load();
+    }
+    document.querySelectorAll('.feature-card__video-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () { abrir(btn.getAttribute('data-video')); });
+    });
+    closeBtn.addEventListener('click', fechar);
+    modal.addEventListener('click', function (e) { if (e.target === modal) fechar(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('aberto')) fechar(); });
+  })();
+  </script>
 
   <!-- ═══════════ ROTEAMENTO ═══════════ -->
   <section class="tr-section tr-section--white" id="roteamento">
