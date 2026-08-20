@@ -1307,7 +1307,9 @@ table.data-table tr:last-child td { border-bottom: 0; }
           </p>
           <div class="feature-card__how"><b>Como faz</b><br>
             A extensão fica atenta à tela do chat; assim que percebe uma mensagem nova do
-            cliente, monta o histórico recente da conversa e consulta a IA.
+            cliente, monta o histórico recente da conversa e consulta a IA. Também dá o primeiro
+            passo sozinho: ao ligar, já avalia o atendimento inteiro e sugere a primeira mensagem
+            (ou a continuação, se o atendente já estiver conduzindo), sem esperar uma dúvida nova.
             A resposta volta com passo a passo, vídeo e link da solução, e pode pré-preencher o
             rascunho sem roubar o foco do atendente nem sobrescrever o que ele já tiver digitado
             por conta própria. Liga/desliga por atendimento; também analisa <em>prints</em> de
@@ -1347,7 +1349,9 @@ table.data-table tr:last-child td { border-bottom: 0; }
           </p>
           <div class="feature-card__how"><b>Como faz</b><br>
             Processa o histórico completo da conversa numa única consulta interna, separada do
-            fluxo de resposta ao cliente. Útil para transferência ou registro em anotações.
+            fluxo de resposta ao cliente. Útil para transferência ou registro em anotações. Já
+            nasce como um cartão flutuante ao lado do painel do Copiloto — pode ser arrastado e
+            redimensionado desde a primeira vez que é gerado, sem precisar fixar antes.
           </div>
           <button type="button" class="feature-card__video-btn" data-video="videos/Resumir_com_IA.mp4" data-video-title="Resumir com IA">
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2l10 6-10 6V2z"/></svg> Ver demonstração
@@ -1536,11 +1540,14 @@ table.data-table tr:last-child td { border-bottom: 0; }
           <div class="feature-card__head">
             <div class="feature-card__icon-box"><span class="tr-icon ic-handshake" style="background-color:var(--tr-dark-amber);width:22px;height:22px"></span></div>
           </div>
-          <h3 class="tr-h3" style="font-size:16px;font-weight:500;margin-bottom:6px">Sondagem inicial pós-transferência</h3>
+          <h3 class="tr-h3" style="font-size:16px;font-weight:500;margin-bottom:6px">Primeiro trâmite em todo atendimento</h3>
           <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
-            Quando o bot transfere o atendimento, a extensão já sugere a primeira mensagem do
-            atendente assumindo a conversa: com um resumo do que o bot deixou registrado, se houver,
-            ou uma saudação simples pedindo o problema, quando não há informação prévia confiável.
+            Ao ligar, o Copiloto já avalia o atendimento inteiro — não só quando o bot transferiu.
+            Se o atendente ainda não escreveu nada, sugere a primeira mensagem assumindo a conversa
+            (resumo do que o bot deixou registrado, ou uma saudação simples pedindo o problema, quando
+            não há informação prévia). Se o atendente já estiver conduzindo o atendimento, sugere a
+            <b>continuação</b> — sem repetir saudação nem "assumir" nada, podendo cumprimentar o cliente
+            pelo nome pra soar mais natural, e sempre avançando de verdade rumo à solução.
           </p>
         </article>
         <article class="tr-card" style="padding:24px">
@@ -1604,8 +1611,10 @@ table.data-table tr:last-child td { border-bottom: 0; }
             <h3 class="tr-h3" style="font-size:15px;font-weight:500">Captura de correção</h3>
           </div>
           <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
-            No 👎, o atendente escolhe o motivo; a próxima mensagem que ele mandar é registrada
-            como a resposta certa, para corrigir a base.
+            No 👎, o rascunho é limpo na hora — antes mesmo de escolher o motivo — para o atendente
+            escrever a resposta certa numa tela em branco. A próxima mensagem que ele mandar é
+            registrada como a resposta certa, para corrigir a base. Um botão de lixeira na barra de
+            ferramentas também permite limpar o rascunho manualmente, a qualquer momento.
           </p>
         </article>
         <article class="tr-card" style="padding:20px">
@@ -1670,10 +1679,10 @@ table.data-table tr:last-child td { border-bottom: 0; }
           <span class="tr-icon ic-thumbtack" style="background-color:var(--tr-dark-sky);width:26px;height:26px"></span>
           <div>
             <h3 class="tr-h3" style="font-size:15px;font-weight:500">Bandeja de IA fixável</h3>
-            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">Os 4 botões
-            de IA (Responder, Resumir, Melhorar Texto, Falar com IA) podem ficar sempre visíveis na
-            barra, em vez de escondidos num menu suspenso. A escolha vale em qualquer tela aberta,
-            não só na conversa atual.</p>
+            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">Os 5 botões
+            de IA (Responder, Resumir, Melhorar Texto, Falar com IA, Limpar rascunho) podem ficar
+            sempre visíveis na barra, em vez de escondidos num menu suspenso. A escolha vale em
+            qualquer tela aberta, não só na conversa atual.</p>
           </div>
         </article>
         <article class="tr-card" style="padding:20px;display:flex;gap:14px;align-items:center">
