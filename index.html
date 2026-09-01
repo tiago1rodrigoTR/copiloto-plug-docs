@@ -1236,6 +1236,16 @@ table.data-table tr:last-child td { border-bottom: 0; }
         Disponível na Chrome Web Store — instala direto no navegador, sem precisar
         de arquivo separado nem permissão de administrador.
       </p>
+      <div class="tr-callout tr-callout--info" style="margin-bottom:32px">
+        <span class="tr-icon ic-arrows-rotate" style="background-color:currentColor;width:24px;height:24px"></span>
+        <div>
+          <div class="tr-callout__title">A extensão avisa quando está desatualizada</div>
+          <div class="tr-callout__text">Correção que sai hoje só ajuda quem está rodando a versão de
+          hoje — e não havia nada indicando que a sua estava para trás. Agora, quando existe uma
+          versão mais nova publicada, uma faixa aparece no topo da PLUG com um botão que aplica a
+          atualização na hora. Depois dela, basta um F5 na página.</div>
+        </div>
+      </div>
       <a href="https://chromewebstore.google.com/detail/copiloto-plug/ndpjnmenpopamhbgjhjpbpadljdaceki"
          target="_blank" rel="noopener" class="tr-btn-editorial tr-btn-editorial--primary"
          style="text-decoration:none;margin-top:32px">
@@ -1300,7 +1310,7 @@ table.data-table tr:last-child td { border-bottom: 0; }
       <div class="tr-section-head">
         <div>
           <div class="tr-eyebrow">Recursos de IA</div>
-          <h2 class="tr-title-fluid">Sete formas de gerar <em>resposta</em></h2>
+          <h2 class="tr-title-fluid">Oito formas de gerar <em>resposta</em></h2>
         </div>
         <p class="tr-lead">Todas passam pelo mesmo princípio: a IA propõe, o atendente decide.</p>
       </div>
@@ -1441,6 +1451,17 @@ table.data-table tr:last-child td { border-bottom: 0; }
             passada de IA transforma o resumo interno numa mensagem para o cliente — dizendo o que
             foi feito e em que estado a solicitação está, sem jargão interno, sem nome de analista
             e sem prometer prazo. Vai para o rascunho: nada é enviado sozinho.
+          </div>
+        </article>
+        <article class="tr-card" style="padding:20px;display:flex;gap:14px;align-items:center">
+          <span class="tr-icon ic-handshake" style="background-color:var(--tr-orange);width:26px;height:26px"></span>
+          <div>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Despedida escrita, não consultada</h3>
+            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">Quando o
+            cliente se despede — <i>obrigado</i>, <i>deu certo</i>, <i>igualmente</i> —, o Copiloto
+            oferece um encerramento pronto, sem gastar uma consulta. São oito textos que variam entre
+            atendimentos e entre repetições, escritos para soar como gente: a pessoa vem primeiro, e
+            o convite a concluir o atendimento aparece só em parte deles, no fim.</p>
           </div>
         </article>
 
@@ -1590,6 +1611,30 @@ table.data-table tr:last-child td { border-bottom: 0; }
         </article>
         <article class="tr-card" style="padding:24px">
           <div class="feature-card__head">
+            <div class="feature-card__icon-box"><span class="tr-icon ic-clock-rotate-left" style="background-color:var(--tr-dark-teal);width:22px;height:22px"></span></div>
+          </div>
+          <h3 class="tr-h3" style="font-size:16px;font-weight:500;margin-bottom:6px">Cada especialista tem seu tempo</h3>
+          <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
+            Medimos quanto cada especialista leva para responder, e a diferença é grande: a maioria
+            devolve em menos de 10 segundos, mas há quem <b>nunca</b> responda abaixo de um minuto.
+            Com um limite único para todos, resposta boa desses mais lentos era descartada por
+            impaciência da própria extensão. Agora o tempo de espera acompanha o especialista.
+          </p>
+        </article>
+        <article class="tr-card" style="padding:24px">
+          <div class="feature-card__head">
+            <div class="feature-card__icon-box"><span class="tr-icon ic-shield" style="background-color:var(--tr-dark-lime);width:22px;height:22px"></span></div>
+          </div>
+          <h3 class="tr-h3" style="font-size:16px;font-weight:500;margin-bottom:6px">Rota de reserva quando o especialista trava</h3>
+          <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
+            Se o especialista não responder, a pergunta é refeita pelo atendimento padrão, que
+            costuma devolver em segundos. A resposta vem marcada: <b>o card avisa que ela não veio do
+            especialista</b>, para o atendente conferir antes de repassar. O atendimento continua
+            apontando para o especialista certo — a próxima pergunta tenta ele de novo.
+          </p>
+        </article>
+        <article class="tr-card" style="padding:24px">
+          <div class="feature-card__head">
             <div class="feature-card__icon-box"><span class="tr-icon ic-route" style="background-color:var(--tr-dark-sky);width:22px;height:22px"></span></div>
           </div>
           <h3 class="tr-h3" style="font-size:16px;font-weight:500;margin-bottom:6px">Re-transferência</h3>
@@ -1692,6 +1737,22 @@ table.data-table tr:last-child td { border-bottom: 0; }
         sem que isso apareça na tela.</p>
       </div>
 
+      <div class="tr-callout tr-callout--success" style="margin-bottom:32px">
+        <span class="tr-icon ic-clock-rotate-left" style="background-color:currentColor;width:24px;height:24px"></span>
+        <div>
+          <div class="tr-callout__title">O cartão do atendimento anda junto com a conversa</div>
+          <div class="tr-callout__text">Com os atendimentos em janelas separadas, a tela principal
+          não enxerga nenhuma conversa — cada uma vive na sua janela. O tempo que aparece no
+          cartão (<i>última mensagem do cliente</i>, <i>última mensagem do técnico</i>) chega por um
+          aviso que a janela do chat manda toda vez que uma mensagem nova aparece.<br><br>
+          Esse aviso podia não começar: se o chat demorasse um instante a mais para montar, ninguém
+          ficava observando a conversa, e o cartão <b>congelava no horário em que a janela abriu</b>
+          — sem erro, sem sinal, só um número que nunca mudava. Agora a observação se restabelece
+          sozinha, inclusive quando o PLUG reconstrói a tela do chat, e o cartão volta a refletir
+          os dois lados da conversa em poucos segundos.</div>
+        </div>
+      </div>
+
       <div class="tr-callout tr-callout--tip" style="margin-bottom:32px">
         <span class="tr-icon ic-lightbulb" style="background-color:currentColor;width:24px;height:24px"></span>
         <div>
@@ -1760,6 +1821,38 @@ table.data-table tr:last-child td { border-bottom: 0; }
             3 minutos da mensagem do cliente, o cartão fica vermelho e chama atenção com um leve
             movimento. Some assim que o atendimento anda. Atendimentos pré-fechados ou ociosos
             nunca disparam o aviso.</p>
+          </div>
+        </article>
+        <article class="tr-card" style="padding:20px;display:flex;gap:14px;align-items:center">
+          <span class="tr-icon ic-gauge" style="background-color:var(--tr-navy);width:26px;height:26px"></span>
+          <div>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Até três por tela, e um monitor de cada vez</h3>
+            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">Quem tem
+            mais de um monitor recebe cada atendimento numa tela diferente: enquanto houver monitor
+            livre, o próximo vai inteiro para lá, e a tela onde você trabalha na PLUG é a última a
+            receber. Só quando acabam as telas livres é que cada monitor divide o espaço — até três
+            janelas lado a lado.</p>
+          </div>
+        </article>
+        <article class="tr-card" style="padding:20px;display:flex;gap:14px;align-items:center">
+          <span class="tr-icon ic-memo-circle-check" style="background-color:var(--tr-navy);width:26px;height:26px"></span>
+          <div>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">De quem é esta janela</h3>
+            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">Cada janela
+            ganha uma faixa no topo com o cliente, o protocolo, quem está do outro lado, o estado do
+            Copiloto e há quanto tempo o cliente espera. Com quatro janelas abertas, era o título da
+            barra do Windows que distinguia uma da outra — e é o conteúdo que você está olhando, não
+            a barra.</p>
+          </div>
+        </article>
+        <article class="tr-card" style="padding:20px;display:flex;gap:14px;align-items:center">
+          <span class="tr-icon ic-clock-rotate-left" style="background-color:var(--tr-navy);width:26px;height:26px"></span>
+          <div>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">A janela se fecha quando o atendimento encerra</h3>
+            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">Encerrou, a
+            janela avisa e se fecha em doze segundos — com um botão <b>Manter aberta</b> para quem
+            ainda está relendo a conversa. Se houver uma sugestão do Copiloto sem nota, a contagem
+            nem começa: primeiro o 👍 ou 👎, depois a janela sai.</p>
           </div>
         </article>
       </div>
