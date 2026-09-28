@@ -1373,7 +1373,11 @@ table.data-table tr:last-child td { border-bottom: 0; }
             Processa o histórico completo da conversa numa única consulta interna, separada do
             fluxo de resposta ao cliente. Útil para transferência ou registro em anotações. Já
             nasce como um cartão flutuante ao lado do painel do Copiloto — pode ser arrastado e
-            redimensionado desde a primeira vez que é gerado, sem precisar fixar antes.
+            redimensionado desde a primeira vez que é gerado, sem precisar fixar antes. O mesmo
+            resumo funciona também na lista de <b>Histórico de Atendimentos</b>: um botão "R"
+            gera o resumo de um atendimento já encerrado sem precisar reabri-lo manualmente, e o
+            botão <b>Atualizar resumo</b> pede um novo a qualquer momento, mesmo depois de já ter
+            um salvo.
           </div>
           <button type="button" class="feature-card__video-btn" data-video="videos/Resumir_com_IA.mp4" data-video-title="Resumir com IA">
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2l10 6-10 6V2z"/></svg> Ver demonstração
@@ -1625,11 +1629,11 @@ table.data-table tr:last-child td { border-bottom: 0; }
           <div class="feature-card__head">
             <div class="feature-card__icon-box"><span class="tr-icon ic-shield" style="background-color:var(--tr-dark-lime);width:22px;height:22px"></span></div>
           </div>
-          <h3 class="tr-h3" style="font-size:16px;font-weight:500;margin-bottom:6px">Rota de reserva quando o especialista trava</h3>
+          <h3 class="tr-h3" style="font-size:16px;font-weight:500;margin-bottom:6px">Nunca a resposta de outro especialista</h3>
           <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
-            Se o especialista não responder, a pergunta é refeita pelo atendimento padrão, que
-            costuma devolver em segundos. A resposta vem marcada: <b>o card avisa que ela não veio do
-            especialista</b>, para o atendente conferir antes de repassar. O atendimento continua
+            Se o especialista não responder, o Copiloto <b>não tenta outro</b> no lugar dele — melhor
+            ficar sem resposta do que entregar a resposta de um assunto diferente com cara de certa.
+            O atendente vê o aviso e o botão <b>Tentar novamente</b>, e o atendimento continua
             apontando para o especialista certo — a próxima pergunta tenta ele de novo.
           </p>
         </article>
@@ -1680,24 +1684,25 @@ table.data-table tr:last-child td { border-bottom: 0; }
         </article>
         <article class="tr-card" style="padding:20px">
           <div style="display:flex;gap:12px;margin-bottom:12px;align-items:center">
-            <span class="tr-icon ic-thumbs-up" style="background-color:var(--tr-green-success);width:22px;height:22px"></span><span class="tr-icon ic-thumbs-down" style="background-color:var(--tr-danger);width:22px;height:22px"></span>
-            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Avaliação obrigatória</h3>
+            <span class="tr-icon ic-chart-line" style="background-color:var(--tr-green-mid);width:22px;height:22px"></span>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Sem clique nenhum na sugestão</h3>
           </div>
           <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
-            Toda sugestão do Copiloto Automático trava o Enter/Enviar até o atendente votar 👍 ou 👎 —
-            em loop, até ser avaliada.
+            O 👍/👎 saiu: nada mais é cobrado no meio do atendimento. O Copiloto passou a medir
+            sozinho, pela mensagem que você de fato envia, se a sugestão foi usada como veio,
+            ajustada, ou descartada — sem tela nova e sem nada para responder.
           </p>
         </article>
         <article class="tr-card" style="padding:20px">
           <div style="display:flex;gap:12px;margin-bottom:12px;align-items:center">
             <span class="tr-icon ic-note-sticky" style="background-color:var(--tr-dark-amber);width:22px;height:22px"></span>
-            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Captura de correção</h3>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Uma nota por atendimento, não por sugestão</h3>
           </div>
           <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
-            No 👎, o rascunho é limpo na hora — antes mesmo de escolher o motivo — para o atendente
-            escrever a resposta certa numa tela em branco. A próxima mensagem que ele mandar é
-            registrada como a resposta certa, para corrigir a base. Um botão de lixeira na barra de
-            ferramentas também permite limpar o rascunho manualmente, a qualquer momento.
+            No lugar da avaliação de cada resposta, uma única pergunta de satisfação (0 a 10)
+            aparece quando o atendimento encerra — pelo técnico ou pelo cliente. Um botão de
+            lixeira na barra de ferramentas continua permitindo limpar o rascunho manualmente,
+            a qualquer momento.
           </p>
         </article>
         <article class="tr-card" style="padding:20px">
@@ -1851,8 +1856,8 @@ table.data-table tr:last-child td { border-bottom: 0; }
             <h3 class="tr-h3" style="font-size:15px;font-weight:500">A janela se fecha quando o atendimento encerra</h3>
             <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">Encerrou, a
             janela avisa e se fecha em doze segundos — com um botão <b>Manter aberta</b> para quem
-            ainda está relendo a conversa. Se houver uma sugestão do Copiloto sem nota, a contagem
-            nem começa: primeiro o 👍 ou 👎, depois a janela sai.</p>
+            ainda está relendo a conversa. Se a pesquisa de satisfação do atendimento ainda não foi
+            respondida, a contagem nem começa: primeiro a nota, depois a janela sai.</p>
           </div>
         </article>
       </div>
@@ -1954,9 +1959,9 @@ table.data-table tr:last-child td { border-bottom: 0; }
             <h3 class="tr-h3" style="font-weight:500">Telemetria de uso</h3>
           </div>
           <table class="data-table">
-            <tr><th>Coleta</th><td>Recurso acionado, atendente, protocolo, se a sugestão ajudou (👍/👎 e motivo)</td></tr>
+            <tr><th>Coleta</th><td>Recurso acionado, atendente, protocolo, e se a sugestão foi enviada como veio, ajustada, ou descartada</td></tr>
             <tr><th>Não coleta</th><td>Mensagens escritas pelo <b>cliente</b>, em nenhuma hipótese — o texto é lido em tempo real para gerar a sugestão e descartado logo depois, sem armazenamento nem transmissão integral</td></tr>
-            <tr><th>Exceção</th><td>Num 👎, o texto sugerido pela IA e a resposta que o próprio atendente enviou depois — para corrigir a base</td></tr>
+            <tr><th>Também coletado</th><td>O texto sugerido pela IA e a mensagem que o próprio atendente enviou em seguida, para identificar onde a base de conhecimento precisa melhorar</td></tr>
           </table>
         </div>
       </div>
