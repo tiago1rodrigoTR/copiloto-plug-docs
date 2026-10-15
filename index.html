@@ -1271,30 +1271,31 @@ table.data-table tr:last-child td { border-bottom: 0; }
       <div class="tr-section-head">
         <div>
           <div class="tr-eyebrow tr-eyebrow--green">O motor por trás</div>
-          <h2 class="tr-title-fluid">Respostas vêm de <em>uma fonte só</em></h2>
+          <h2 class="tr-title-fluid">De onde vêm <em>as respostas</em></h2>
         </div>
-        <p class="tr-lead">Toda resposta sugerida ao cliente vem da <b>TRIA</b> — e somente dela.
-        Não há segunda base de conhecimento, nem fonte alternativa dependendo do recurso.</p>
+        <p class="tr-lead">A conversa com o cliente é respondida pela <b>TRIA</b>. A única exceção é o
+        print: a tela que o cliente envia é respondida pela <b>Pesquisa Central por imagens</b>, que
+        consulta a Central de Soluções.</p>
       </div>
 
       <div class="tr-card" style="padding:28px;max-width:640px">
         <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
           <span class="tr-icon ic-microchip-ai" style="background-color:var(--tr-orange);width:28px;height:28px"></span>
-          <h3 class="tr-h3" style="font-weight:500">TRIA <span style="font-weight:300;color:var(--tr-gray)">— a única fonte das respostas</span></h3>
+          <h3 class="tr-h3" style="font-weight:500">TRIA <span style="font-weight:300;color:var(--tr-gray)">— a fonte das respostas da conversa</span></h3>
         </div>
         <p style="font-size:14px;font-weight:300;color:var(--tr-text-body);line-height:1.6">
-          <b>É apenas a TRIA.</b> A mesma assistente virtual que já conversa com o cliente no bot
+          <b>Na conversa, é a TRIA.</b> A mesma assistente virtual que já conversa com o cliente no bot
           de triagem antes de transferir o atendimento para um humano é quem responde ao Copiloto —
           então o atendente e o cliente veem conhecimento da mesma origem, sem divergência de
           conteúdo entre o que o bot disse antes e o que o Copiloto sugere depois.
         </p>
         <p style="font-size:14px;font-weight:300;color:var(--tr-text-body);line-height:1.6;margin-top:12px">
           Os recursos que geram resposta ao cliente — <b>Copiloto Automático</b>,
-          <b>Responder com IA</b>, <b>Aprofundar Assunto</b> e a <b>análise de prints</b> —
-          consultam a TRIA, sempre com o especialista do assunto.
-          No caso do print, uma IA especializada em imagens só <b>lê</b> a tela que o cliente
-          enviou e transcreve o texto dela — quem escreve a resposta continua sendo a TRIA, na
-          mesma conversa do atendimento.
+          <b>Responder com IA</b> e <b>Aprofundar Assunto</b> — consultam a TRIA, sempre com o
+          especialista do assunto. O <b>print</b> é a exceção: a Pesquisa Central por imagens lê a
+          tela, pesquisa a solução na Central de Soluções e escreve a mensagem. A TRIA recebe o
+          registro do print na mesma conversa do atendimento — para as perguntas seguintes do
+          cliente não perderem o contexto — e responde no lugar dela se a pesquisa falhar.
         </p>
         <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.55;margin-top:12px;
                   border-top:1px solid var(--tr-gray-200);padding-top:12px">
@@ -1977,7 +1978,7 @@ table.data-table tr:last-child td { border-bottom: 0; }
     <div class="tr-container">
       <div class="tr-section-head">
         <div>
-          <div class="tr-eyebrow">Versões 58 a 68 · outubro de 2026</div>
+          <div class="tr-eyebrow">Versões 58 a 69 · outubro de 2026</div>
           <h2 class="tr-title-fluid">O que mudou <em>desde setembro</em></h2>
         </div>
         <p class="tr-lead">A maior parte das mudanças vem de relatos de quem atende: o que a IA
@@ -2021,8 +2022,8 @@ table.data-table tr:last-child td { border-bottom: 0; }
         <article class="tr-card" style="padding:20px;display:flex;gap:14px;align-items:center">
           <span class="tr-icon ic-microchip-ai" style="background-color:var(--tr-green-mid);width:26px;height:26px"></span>
           <div>
-            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Prints lidos por uma IA de imagens</h3>
-            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">A tela enviada pelo cliente é transcrita literalmente — título da janela, mensagem e código do erro, caminho de menu — e a transcrição vai para a TRIA junto com o que o cliente escreveu.</p>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Prints respondidos pela Pesquisa Central</h3>
+            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">A tela enviada pelo cliente e o que ele escreveu junto vão para a Pesquisa Central por imagens, que lê o erro, pesquisa a Central de Soluções e devolve a mensagem pronta, com o passo a passo.</p>
           </div>
         </article>
         <article class="tr-card" style="padding:20px;display:flex;gap:14px;align-items:center">
@@ -2058,11 +2059,12 @@ table.data-table tr:last-child td { border-bottom: 0; }
       <div class="tr-callout tr-callout--info" style="margin-top:32px">
         <span class="tr-icon ic-lightbulb" style="background-color:currentColor;width:24px;height:24px"></span>
         <div>
-          <div class="tr-callout__title">Por que o print passa por outra IA antes da TRIA</div>
+          <div class="tr-callout__title">Por que o print não é respondido pela TRIA</div>
           <div class="tr-callout__text">A TRIA aceita a imagem, mas não a usa: medimos que dos 17.639
-          caracteres da imagem enviada só 28 chegavam ao modelo, como texto. Por isso o print é transcrito
-          antes — e a transcrição literal, com as quebras de linha, achou a solução certa na base 4 de 4
-          vezes, contra 0 de 3 quando o conteúdo era descrito com outras palavras.</div>
+          caracteres da imagem enviada só 28 chegavam ao modelo, como texto. Por isso o print vai para uma
+          IA que enxerga a imagem de verdade e pesquisa a Central de Soluções a partir do que está na tela.
+          A TRIA continua sabendo do print: a transcrição e a resposta dada entram na conversa do
+          atendimento.</div>
         </div>
       </div>
     </div>
