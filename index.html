@@ -1292,6 +1292,9 @@ table.data-table tr:last-child td { border-bottom: 0; }
           Os recursos que geram resposta ao cliente — <b>Copiloto Automático</b>,
           <b>Responder com IA</b>, <b>Aprofundar Assunto</b> e a <b>análise de prints</b> —
           consultam a TRIA, sempre com o especialista do assunto.
+          No caso do print, uma IA especializada em imagens só <b>lê</b> a tela que o cliente
+          enviou e transcreve o texto dela — quem escreve a resposta continua sendo a TRIA, na
+          mesma conversa do atendimento.
         </p>
         <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.55;margin-top:12px;
                   border-top:1px solid var(--tr-gray-200);padding-top:12px">
@@ -1606,9 +1609,10 @@ table.data-table tr:last-child td { border-bottom: 0; }
           <h3 class="tr-h3" style="font-size:16px;font-weight:500;margin-bottom:6px">Primeiro trâmite em todo atendimento</h3>
           <p style="font-size:13px;font-weight:300;color:var(--tr-gray);line-height:1.5">
             Ao ligar, o Copiloto já avalia o atendimento inteiro — não só quando o bot transferiu.
-            Se o atendente ainda não escreveu nada, sugere a primeira mensagem assumindo a conversa
-            (resumo do que o bot deixou registrado, ou uma saudação simples pedindo o problema, quando
-            não há informação prévia). Se o atendente já estiver conduzindo o atendimento, sugere a
+            Se o atendente ainda não escreveu nada, sugere a primeira mensagem assumindo a conversa:
+            a TRIA, que já conversou com o cliente no bot, só recebe o aviso de que o atendente
+            assumiu e continua de onde parou — com o nome do atendente na apresentação e sem pedir
+            de novo o que o cliente já contou. Se o atendente já estiver conduzindo o atendimento, sugere a
             <b>continuação</b> — sem repetir saudação nem "assumir" nada, podendo cumprimentar o cliente
             pelo nome pra soar mais natural, e sempre avançando de verdade rumo à solução.
           </p>
@@ -1959,10 +1963,106 @@ table.data-table tr:last-child td { border-bottom: 0; }
             <h3 class="tr-h3" style="font-weight:500">Telemetria de uso</h3>
           </div>
           <table class="data-table">
-            <tr><th>Coleta</th><td>Recurso acionado, atendente, protocolo, e se a sugestão foi enviada como veio, ajustada, ou descartada</td></tr>
+            <tr><th>Coleta</th><td>Recurso acionado, atendente (nome e e-mail), protocolo, e se a sugestão foi enviada como veio, ajustada, ou descartada</td></tr>
             <tr><th>Não coleta</th><td>Mensagens escritas pelo <b>cliente</b>, em nenhuma hipótese — o texto é lido em tempo real para gerar a sugestão e descartado logo depois, sem armazenamento nem transmissão integral</td></tr>
             <tr><th>Também coletado</th><td>O texto sugerido pela IA e a mensagem que o próprio atendente enviou em seguida, para identificar onde a base de conhecimento precisa melhorar</td></tr>
           </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ NOVIDADES (v58-v67) ═══════════ -->
+  <section class="tr-section tr-section--cream" id="novidades">
+    <div class="tr-container">
+      <div class="tr-section-head">
+        <div>
+          <div class="tr-eyebrow">Versões 58 a 67 · outubro de 2026</div>
+          <h2 class="tr-title-fluid">O que mudou <em>desde setembro</em></h2>
+        </div>
+        <p class="tr-lead">A maior parte das mudanças vem de relatos de quem atende: o que a IA
+        esquecia no meio da conversa, sugestão gasta com um "ok" e telas que liam o print pela metade.</p>
+      </div>
+
+      <div class="tr-callout tr-callout--tip" style="margin-bottom:32px">
+        <span class="tr-icon ic-lightbulb" style="background-color:currentColor;width:24px;height:24px"></span>
+        <div>
+          <div class="tr-callout__title">Por que a conversa com a TRIA não pode trocar no meio</div>
+          <div class="tr-callout__text">A TRIA guarda a memória do atendimento na conversa, e só nela.
+          Até a versão 64, trocar de especialista abria uma conversa nova — e a resposta seguinte saía
+          como se o cliente nunca tivesse explicado nada. Num caso real, a conversa do protocolo foi
+          usada das 14:47 às 15:00 e, às 15:07, depois da troca de especialista, a TRIA recomeçou do zero.
+          Agora a conversa do protocolo vale do bot até o fim.</div>
+        </div>
+      </div>
+
+      <div class="compact-grid">
+        <article class="tr-card" style="padding:20px;display:flex;gap:14px;align-items:center">
+          <span class="tr-icon ic-comments" style="background-color:var(--tr-dark-sky);width:26px;height:26px"></span>
+          <div>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Uma conversa, uma memória</h3>
+            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">Cada atendimento usa sempre a mesma conversa na TRIA, do bot até o fim — inclusive quando o assunto muda de especialista ou o cliente manda um print. A TRIA não esquece o que já foi dito.</p>
+          </div>
+        </article>
+        <article class="tr-card" style="padding:20px;display:flex;gap:14px;align-items:center">
+          <span class="tr-icon ic-handshake" style="background-color:var(--tr-dark-amber);width:26px;height:26px"></span>
+          <div>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">A abertura continua de onde o bot parou</h3>
+            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">A primeira mensagem sugerida já mostra que o atendente leu o que o cliente contou, apresenta o atendente pelo nome e sai mais rápido: não espera mais o resumo do atendimento ficar pronto.</p>
+          </div>
+        </article>
+        <article class="tr-card" style="padding:20px;display:flex;gap:14px;align-items:center">
+          <span class="tr-icon ic-clock-rotate-left" style="background-color:var(--tr-dark-teal);width:26px;height:26px"></span>
+          <div>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Menos sugestão repetida</h3>
+            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">Mensagens que não pedem resposta — "ok", "?", "aguardo", "só um minuto", "vou testar" — não geram nova consulta. Quando o cliente escreve em várias mensagens seguidas, o ajuste espera ele terminar.</p>
+          </div>
+        </article>
+        <article class="tr-card" style="padding:20px;display:flex;gap:14px;align-items:center">
+          <span class="tr-icon ic-microchip-ai" style="background-color:var(--tr-green-mid);width:26px;height:26px"></span>
+          <div>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Prints lidos por uma IA de imagens</h3>
+            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">A tela enviada pelo cliente é transcrita literalmente — título da janela, mensagem e código do erro, caminho de menu — e a transcrição vai para a TRIA junto com o que o cliente escreveu.</p>
+          </div>
+        </article>
+        <article class="tr-card" style="padding:20px;display:flex;gap:14px;align-items:center">
+          <span class="tr-icon ic-route" style="background-color:var(--tr-dark-gold);width:26px;height:26px"></span>
+          <div>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Apoio (🆘) com destino decidido pela IA</h3>
+            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">Ao pedir apoio, a IA lê a conversa: se o atendente já tentou resolver com o cliente, abre o Líder, com o resumo do atendimento copiado para colar; senão — ou na dúvida —, abre a TRIA.</p>
+          </div>
+        </article>
+        <article class="tr-card" style="padding:20px;display:flex;gap:14px;align-items:center">
+          <span class="tr-icon ic-memo-circle-check" style="background-color:var(--tr-dark-sky);width:26px;height:26px"></span>
+          <div>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">SSC conferida no próprio SGD</h3>
+            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">O resumo da consulta de SSC ganhou o botão Abrir no SGD, para conferir a solicitação na fonte. E a janela Dados do cliente ganhou SSCs pendentes, que abre no SGD a lista daquele cliente com os filtros já escolhidos.</p>
+          </div>
+        </article>
+        <article class="tr-card" style="padding:20px;display:flex;gap:14px;align-items:center">
+          <span class="tr-icon ic-sparkles" style="background-color:var(--tr-dark-lime);width:26px;height:26px"></span>
+          <div>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Respostas mais diretas em Escrita Fiscal e Contabilidade</h3>
+            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">Os especialistas de Escrita Fiscal e de Contabilidade passaram a responder com a configuração "Copiloto Chat" da TRIA, que já entrega os passos da solução em vez de pedir confirmação antes.</p>
+          </div>
+        </article>
+        <article class="tr-card" style="padding:20px;display:flex;gap:14px;align-items:center">
+          <span class="tr-icon ic-bell" style="background-color:var(--tr-orange);width:26px;height:26px"></span>
+          <div>
+            <h3 class="tr-h3" style="font-size:15px;font-weight:500">Aviso de versão nova</h3>
+            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">Quando há uma versão mais nova publicada, uma faixa no topo da PLUG avisa e aplica a atualização com um clique — correção só ajuda quem está na versão do dia.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="tr-callout tr-callout--info" style="margin-top:32px">
+        <span class="tr-icon ic-lightbulb" style="background-color:currentColor;width:24px;height:24px"></span>
+        <div>
+          <div class="tr-callout__title">Por que o print passa por outra IA antes da TRIA</div>
+          <div class="tr-callout__text">A TRIA aceita a imagem, mas não a usa: medimos que dos 17.639
+          caracteres da imagem enviada só 28 chegavam ao modelo, como texto. Por isso o print é transcrito
+          antes — e a transcrição literal, com as quebras de linha, achou a solução certa na base 4 de 4
+          vezes, contra 0 de 3 quando o conteúdo era descrito com outras palavras.</div>
         </div>
       </div>
     </div>
