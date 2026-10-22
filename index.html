@@ -1290,8 +1290,9 @@ table.data-table tr:last-child td { border-bottom: 0; }
             <p style="font-size:14px;font-weight:300;color:var(--tr-text-body);line-height:1.6">O
             Copiloto lê o que o cliente escolheu no menu do bot e mostra ao lado do seletor de
             especialista: <b>→ Escrita Fiscal ·&nbsp;menu</b> (ou <b>·&nbsp;fila</b>, quando veio da fila do
-            atendimento). O especialista fica salvo no atendimento. Se você trocar no seletor, vale a
-            sua escolha.</p>
+            atendimento). Se a escolha ficou lá em cima numa conversa longa, ele procura no histórico,
+            mesmo com você digitando, e deixa a conversa na última mensagem. O especialista fica salvo
+            no atendimento. Se você trocar no seletor, vale a sua escolha.</p>
           </div>
         </div>
         <div class="tr-trail">
@@ -1376,9 +1377,10 @@ table.data-table tr:last-child td { border-bottom: 0; }
             <b>·&nbsp;detectando…</b> enquanto ele lê o assunto que o cliente escolheu no menu do bot.<br>
             <b>→ Escrita Fiscal ·&nbsp;menu</b> quando o especialista veio dessa escolha, ou <b>·&nbsp;fila</b>
             quando veio da fila do atendimento.<br>
-            <b>⚠ não identificado — selecione</b> quando ele não achou o assunto: o painel mostra os
-            especialistas para você escolher com um clique, ou você escolhe no seletor, e as sugestões
-            voltam. Se preferir, siga sem sugestões automáticas. O chat continua livre o tempo todo.
+            <b>⚠ não identificado — selecione</b> quando ele não achou o assunto: o Copiloto não
+            adivinha. O painel mostra os especialistas para você escolher com um clique, ou você
+            escolhe no seletor; até lá nada é consultado na IA, e a dúvida que o cliente mandou é
+            respondida assim que você escolher. O chat continua livre o tempo todo.
           </p>
         </div>
       </div>
@@ -1558,7 +1560,8 @@ table.data-table tr:last-child td { border-bottom: 0; }
           </p>
           <div class="feature-card__how"><b>Como usar</b><br>
             Clique em 🪄, marque as mensagens e clique em Gerar resposta. A resposta abre numa janela
-            com Inserir no chat, Copiar e Aprofundar assunto.
+            com Inserir no chat, Copiar e Aprofundar assunto. Se o atendimento ainda não tem
+            especialista, ele pede para você escolher antes, mesmo com o Copiloto desligado.
           </div>
           <button type="button" class="feature-card__video-btn" data-video="videos/Responder_com_IA.mp4" data-video-title="Responder com IA">
             <svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2l10 6-10 6V2z"/></svg> Ver demonstração
@@ -1766,8 +1769,8 @@ table.data-table tr:last-child td { border-bottom: 0; }
         <span class="tr-icon ic-arrows-rotate" style="background-color:currentColor;width:24px;height:24px"></span>
         <div>
           <div class="tr-callout__title">Mantenha a versão em dia</div>
-          <div class="tr-callout__text">Quando sai versão nova, uma faixa no topo do PLUG e uma janela
-          pedem a atualização. Você tem 30 minutos para terminar o atendimento em curso; depois disso,
+          <div class="tr-callout__text">Quando sai versão nova, um aviso fixo no topo do PLUG e uma
+          janela pedem a atualização. Você tem 30 minutos para terminar o atendimento em curso; depois disso,
           os recursos de IA ficam pausados até atualizar. Atualizar é um clique, e a página do PLUG
           recarrega sozinha: copie antes o texto do rascunho. O selo no canto inferior esquerdo do chat
           mostra a versão instalada, verde com ✓ quando está em dia e laranja com Atualizar quando há
@@ -1840,13 +1843,17 @@ table.data-table tr:last-child td { border-bottom: 0; }
   <section class="tr-section tr-section--cream" id="versoes" style="padding-top:40px;padding-bottom:40px">
     <div class="tr-container">
       <details class="doc-versoes">
-        <summary>Linha do tempo das versões <span class="doc-versoes__faixa">58 a 75</span></summary>
+        <summary>Linha do tempo das versões <span class="doc-versoes__faixa">58 a 77</span></summary>
         <div class="doc-versoes__corpo">
           <table class="data-table">
             <thead>
               <tr><th>Versão</th><th>O que mudou</th></tr>
             </thead>
             <tbody>
+              <tr><td rowspan="3"><b>77</b></td><td>O especialista vem sempre da escolha do cliente ou de você: o Copiloto procura o assunto no histórico, mesmo com você digitando, e não adivinha mais quando não encontra — a faixa pede a escolha.</td></tr>
+              <tr><td>Nenhuma consulta à IA sem especialista: Responder com IA, Aprofundar e prints também pedem a escolha, e a dúvida do cliente é respondida assim que você escolher.</td></tr>
+              <tr><td>O clique do cliente no menu vale mesmo com outras mensagens no meio, e os botões da faixa mostram os nomes que você conhece.</td></tr>
+              <tr><td><b>76</b></td><td>O aviso de versão nova vira um aviso fixo no topo e não cria mais barra de rolagem.</td></tr>
               <tr><td><b>75</b></td><td>Clicar para digitar não faz mais a conversa subir para o topo.</td></tr>
               <tr><td rowspan="2"><b>73–74</b></td><td>Em todos os especialistas, a primeira mensagem parte do que já está no atendimento, também quando o cliente veio direto do distribuidor, e não fica mais sem conteúdo.</td></tr>
               <tr><td>A dúvida que o cliente manda enquanto a primeira mensagem é montada não se perde, e trocar o especialista nesse meio-tempo vale na hora.</td></tr>
