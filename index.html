@@ -1335,7 +1335,8 @@ table.data-table tr:last-child td { border-bottom: 0; }
             <h3 class="tr-h3" style="font-size:16px;font-weight:500;margin-bottom:4px">Você revisa e insere</h3>
             <p style="font-size:14px;font-weight:300;color:var(--tr-text-body);line-height:1.6">O
             card traz a resposta e, quando houver, os links <b>Vídeo da solução</b> e <b>Solução
-            completa</b>, com os botões <b>Inserir no chat</b>, <b>Copiar</b> e <b>Aprofundar</b>.
+            completa</b> para você consultar, com os botões <b>Inserir no chat</b>, <b>Copiar</b> e
+            <b>Aprofundar</b>. Os links ficam só no card: não vão para o rascunho nem para o cliente.
             Com o rascunho vazio, a sugestão também já entra nele, sem apagar o que você digitou. Quem
             envia é sempre você. Se a base não tem solução, o card diz isso em vez de inventar.</p>
           </div>
@@ -1711,7 +1712,9 @@ table.data-table tr:last-child td { border-bottom: 0; }
             <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">As janelas
             se organizam em colunas, na ordem em que foram abertas, até três por monitor. Com mais de
             um monitor, cada atendimento vai para uma tela livre antes de dividir espaço, e a tela do
-            PLUG é a última. Ao fechar uma, as outras se redistribuem.</p>
+            PLUG é a última. Saiu do lugar? O botão <b>Organizar janelas</b>, no painel de
+            atendimentos abertos e no topo de cada janela, arruma tudo de novo: traz de volta as
+            minimizadas e deixa as que passam de três em cascata por cima das colunas.</p>
           </div>
         </article>
         <article class="tr-card" style="padding:20px;display:flex;gap:14px;align-items:center">
@@ -1844,13 +1847,16 @@ table.data-table tr:last-child td { border-bottom: 0; }
   <section class="tr-section tr-section--cream" id="versoes" style="padding-top:40px;padding-bottom:40px">
     <div class="tr-container">
       <details class="doc-versoes">
-        <summary>Linha do tempo das versões <span class="doc-versoes__faixa">58 a 78</span></summary>
+        <summary>Linha do tempo das versões <span class="doc-versoes__faixa">58 a 79</span></summary>
         <div class="doc-versoes__corpo">
           <table class="data-table">
             <thead>
               <tr><th>Versão</th><th>O que mudou</th></tr>
             </thead>
             <tbody>
+              <tr><td rowspan="3"><b>79</b></td><td>Botão Organizar janelas no painel de atendimentos abertos e no topo de cada janela: até três lado a lado por tela, as demais em cascata.</td></tr>
+              <tr><td>A sugestão volta a entrar sozinha no rascunho nas próximas mensagens, também depois de Limpar rascunho.</td></tr>
+              <tr><td>Os links da solução ficam só no card, para você consultar; o rascunho leva apenas o texto.</td></tr>
               <tr><td><b>78</b></td><td>Aprofundar aceita uma imagem junto com o seu texto: pelo botão, colando com Ctrl+V ou arrastando.</td></tr>
               <tr><td rowspan="3"><b>77</b></td><td>O especialista vem sempre da escolha do cliente ou de você: o Copiloto procura o assunto no histórico, mesmo com você digitando, e não adivinha mais quando não encontra — a faixa pede a escolha.</td></tr>
               <tr><td>Nenhuma consulta à IA sem especialista: Responder com IA, Aprofundar e prints também pedem a escolha, e a dúvida do cliente é respondida assim que você escolher.</td></tr>
