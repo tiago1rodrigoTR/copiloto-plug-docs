@@ -1673,7 +1673,7 @@ table.data-table tr:last-child td { border-bottom: 0; }
             Clique em 🆘. Se você já tentou resolver com o cliente, abre o Líder, com o resumo do
             atendimento copiado: é só colar (Ctrl+V) e enviar. Senão, ou na dúvida, abre a TRIA, que faz
             uma análise prévia e segue para o líder se não resolver. Já vai identificado com o seu código
-            de técnico.
+            de técnico e o seu nome.
           </div>
         </article>
 
@@ -1709,10 +1709,10 @@ table.data-table tr:last-child td { border-bottom: 0; }
           <span class="tr-icon ic-gauge" style="background-color:var(--tr-dark-teal);width:26px;height:26px"></span>
           <div>
             <h3 class="tr-h3" style="font-size:15px;font-weight:500">Janelas lado a lado</h3>
-            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">As janelas
-            se organizam em colunas, na ordem em que foram abertas, até três por monitor. Com mais de
-            um monitor, cada atendimento vai para uma tela livre antes de dividir espaço, e a tela do
-            PLUG é a última. Saiu do lugar? O botão <b>Organizar janelas</b>, no painel de
+            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">Cada
+            janela nova abre ao lado da última, na mesma tela, até três em colunas. Só depois a próxima
+            vai para outro monitor, e a tela do PLUG é a última a receber janelas. Fechar uma deixa o
+            espaço livre para a próxima, sem mexer nas outras. Saiu do lugar? O botão <b>Organizar janelas</b>, no painel de
             atendimentos abertos e no topo de cada janela, arruma tudo de novo: traz de volta as
             minimizadas e deixa as que passam de três em cascata por cima das colunas.</p>
           </div>
@@ -1741,9 +1741,12 @@ table.data-table tr:last-child td { border-bottom: 0; }
           <span class="tr-icon ic-memo-circle-check" style="background-color:var(--tr-navy);width:26px;height:26px"></span>
           <div>
             <h3 class="tr-h3" style="font-size:15px;font-weight:500">De quem é esta janela</h3>
-            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">No topo de
-            cada janela, uma faixa com o cliente, o protocolo, quem está do outro lado, o estado do
-            Copiloto e há quanto tempo o cliente espera.</p>
+            <p style="font-size:13px;font-weight:300;color:var(--tr-gray);margin-top:4px">Cada
+            janela tem um número e uma cor: “1 · Nome do cliente” no título e na barra de título, o
+            mesmo selo ao lado de Atendimento, no painel do Copiloto e no cartão da tela principal, que
+            ganha uma faixa lateral na mesma cor. Duas
+            janelas abertas nunca repetem a cor. No topo, uma faixa com o cliente, o protocolo, quem
+            está do outro lado, o estado do Copiloto e há quanto tempo o cliente espera.</p>
           </div>
         </article>
       </div>
@@ -1847,13 +1850,16 @@ table.data-table tr:last-child td { border-bottom: 0; }
   <section class="tr-section tr-section--cream" id="versoes" style="padding-top:40px;padding-bottom:40px">
     <div class="tr-container">
       <details class="doc-versoes">
-        <summary>Linha do tempo das versões <span class="doc-versoes__faixa">58 a 79</span></summary>
+        <summary>Linha do tempo das versões <span class="doc-versoes__faixa">58 a 80</span></summary>
         <div class="doc-versoes__corpo">
           <table class="data-table">
             <thead>
               <tr><th>Versão</th><th>O que mudou</th></tr>
             </thead>
             <tbody>
+              <tr><td rowspan="3"><b>80</b></td><td>Cada janela de atendimento ganha um número e uma cor, no título, no ícone, no topo, ao lado de Atendimento, no painel do Copiloto e no cartão da tela principal.</td></tr>
+              <tr><td>As janelas abrem em sequência: a nova ao lado da última, até três por tela, e só depois no outro monitor.</td></tr>
+              <tr><td>O botão de apoio leva o seu nome para o Líder e para a TRIA.</td></tr>
               <tr><td rowspan="3"><b>79</b></td><td>Botão Organizar janelas no painel de atendimentos abertos e no topo de cada janela: até três lado a lado por tela, as demais em cascata.</td></tr>
               <tr><td>A sugestão volta a entrar sozinha no rascunho nas próximas mensagens, também depois de Limpar rascunho.</td></tr>
               <tr><td>Os links da solução ficam só no card, para você consultar; o rascunho leva apenas o texto.</td></tr>
